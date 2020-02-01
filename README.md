@@ -1,2 +1,2 @@
 # News-Feed
-A news feed application
+Another news feed application based on python & Django
