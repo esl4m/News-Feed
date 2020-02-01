@@ -80,16 +80,13 @@ WSGI_APPLICATION = 'news.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DATABASE_NAME'),
-        'USER': os.environ.get('DATABASE_USER'),
-        'PASSWORD': os.environ.get('DATABASE_PASS'),
-        'HOST': os.environ.get('DATABASE_HOST'),
-        'PORT': os.environ.get('DATABASE_PORT'),
-    },
-    'original':{
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.environ.get('MYSQL_DATABASE'),
+        'USER': os.environ.get('MYSQL_USER'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
+        'HOST': os.environ.get('MYSQL_LOCAL_HOST'),
+        'PORT': os.environ.get('MYSQL_PORT'),
     }
 }
 
@@ -131,3 +128,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+
+LOGIN_REDIRECT_URL='index'
+LOGOUT_REDIRECT_URL='index'
+
+# REDIS SETTINGS
+REDIS_PORT = os.environ.get('REDIS_PORT', '6379')
+REDIS_HOST = os.environ.get('REDIS_HOST', 'redis_db')
+REDIS_DB = 0
