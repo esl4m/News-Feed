@@ -1,4 +1,4 @@
-Django==2.2.22
+Django==2.2.24
 django-environ==0.4.5
 django-admin-tools==0.8.1
 djangorestframework==3.11.2
