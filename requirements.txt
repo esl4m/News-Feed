@@ -4,6 +4,6 @@ django-admin-tools==0.8.1
 djangorestframework==3.11.2
 django-multiselectfield==0.1.11
 mysqlclient==1.4.6
-numpy==1.17.0
+numpy==1.22.0
 pandas==0.25.0
 redis==3.3.2
