@@ -6,4 +6,4 @@ django-multiselectfield==0.1.11
 mysqlclient==1.4.6
 numpy==1.17.0
 pandas==0.25.0
-redis==3.3.2
+redis==4.4.4
